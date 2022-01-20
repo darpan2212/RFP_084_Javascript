@@ -1,0 +1,27 @@
+<script>
+
+    function ask(theQues, ...others) {
+        let ans = ques(theQues);
+        if (ans <= 14) others[0]();
+        else if (ans > 14 && ans < 20) others[1]();
+        else others[2]();
+    }
+
+    let ques = function (theQues) {
+        return prompt(theQues);
+    }
+
+    ask("What is your age?", child, teen, young);
+
+    function child() {
+        alert("You are a child");
+    }
+
+    function teen() {
+        alert("You are a teen")
+    }
+
+    function young() {
+        alert("You are a young");
+    }
+</script>
